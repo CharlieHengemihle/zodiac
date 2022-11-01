@@ -11,4 +11,13 @@ describe('zodiac routes', () => {
     });
     expect(res.body).toEqual(expected);
   });
+
+  it('/zodiac/:id should return zodiac detail', async () => {
+    const res = await request(app).get('/zodiac/1');
+    const gemini = {
+      id: '1',
+      name: 'aquarius',
+    };
+    expect(res.body).toEqual(gemini);
+  });
 });

@@ -2,7 +2,6 @@ const request = require('supertest');
 const app = require('../lib/app');
 
 const { zodiacs } = require('../lib/zodiac-data');
-const { horoscopes } = require('../lib/horoscope-data');
 
 describe('zodiac routes', () => {
   it('/zodiac should return a list of signs', async () => {
